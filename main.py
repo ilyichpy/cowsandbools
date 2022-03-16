@@ -9,7 +9,8 @@ def play():
             if n > 10 or n < 1:
                 print('неверное значение')
             else:
-                return n == int(input())
+                return n
+                break
 
 
     a = adding_animals()
@@ -18,21 +19,22 @@ def play():
         b = random.randint(1, 9)
         if str(b) not in lst:
             lst.append(str(b))
-    #print(ls)                        для отладки
+    #print(lst)
 
     while True:
         print('введите', a, 'разных цифр в одну строку через пробел')
-        n = input().split()
-        #print(n)                     тоже
-        if n == lst:
+        your_input = input().split()
+        #print(your_input)
+        if your_input == lst:
+            print('вы выиграли!')
             break
         else:
             counter1 = 0
             counter2 = 0
             for i in range(len(lst)):
-                if lst[i] == n[i]:
+                if lst[i] == your_input[i]:
                     counter1 += 1
-                if n[i] in lst:
+                if your_input[i] in lst and your_input[i] != lst[i]:
                     counter2 += 1
             print('cows =', counter1, 'bools =', counter2)
 
