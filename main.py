@@ -1,39 +1,38 @@
 import random
 
 
-
-
 def play():
-    def kolvo_skota():
+    def adding_animals():
         print('введите чиcло от 1 до 10')
-        n = int(input())
-        if n > 10 or n < 1:
-            print('попробуй еще разок')
-            return kolvo_skota()
-        else:
-            return n
+        while True:
+            n = int(input())
+            if n > 10 or n < 1:
+                print('неверное значение')
+            else:
+                return n == int(input())
 
-    a = kolvo_skota()
-    ls = []
-    while len(ls) != a:
+
+    a = adding_animals()
+    lst = []
+    while len(lst) != a:
         b = random.randint(1, 9)
-        if str(b) not in ls:
-            ls.append(str(b))
+        if str(b) not in lst:
+            lst.append(str(b))
     #print(ls)                        для отладки
 
     while True:
         print('введите', a, 'разных цифр в одну строку через пробел')
         n = input().split()
         #print(n)                     тоже
-        if n == ls:
+        if n == lst:
             break
         else:
             counter1 = 0
             counter2 = 0
-            for i in range(len(ls)):
-                if ls[i] == n[i]:
+            for i in range(len(lst)):
+                if lst[i] == n[i]:
                     counter1 += 1
-                if n[i] in ls:
+                if n[i] in lst:
                     counter2 += 1
             print('cows =', counter1, 'bools =', counter2)
 
