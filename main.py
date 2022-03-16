@@ -3,7 +3,7 @@ import random
 
 
 
-def igra():
+def play():
     def kolvo_skota():
         print('введите чиcло от 1 до 10')
         n = int(input())
@@ -37,4 +37,4 @@ def igra():
                     counter2 += 1
             print('cows =', counter1, 'bools =', counter2)
 
-igra()
+play()
