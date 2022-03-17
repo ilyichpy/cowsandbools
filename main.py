@@ -22,7 +22,7 @@ def play():
     #print(lst)
 
     while True:
-        print('введите', a, 'разных цифр в одну строку без пробела')
+        print('введите', a, 'разных цифр в одну строку без пробела')  #no more spase between your_input
         your_input = int(input())
         your_input = [str(num) for num in str(your_input)]
         #print(your_input)
