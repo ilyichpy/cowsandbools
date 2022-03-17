@@ -22,8 +22,9 @@ def play():
     #print(lst)
 
     while True:
-        print('введите', a, 'разных цифр в одну строку через пробел')
-        your_input = input().split()
+        print('введите', a, 'разных цифр в одну строку без пробела')
+        your_input = int(input())
+        your_input = [str(num) for num in str(your_input)]
         #print(your_input)
         if your_input == lst:
             print('вы выиграли!')
